@@ -1,0 +1,210 @@
+body {
+    background: #1a1a2e;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+}
+
+.heading--primary {
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3c4f6d;
+}
+
+.profile-block {
+    background: #232946;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
+    text-align: center;
+    border-left: 5px solid #6a0dad;
+}
+
+.profile-block__photo-container {
+    margin-bottom: 25px;
+}
+
+.profile-block__photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 7px solid #232946;
+    box-shadow: 0 0 0 4px #6a0dad, 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.profile-block__title {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.profile-block__text {
+    font-size: 1.05em;
+    line-height: 1.7;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card-mini {
+    background: #232946;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #3c4f6d;
+}
+
+.card-mini:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); 
+    border-color: #6a0dad;
+}
+
+.card-mini__title {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.btn--details {
+    background-color: #6a0dad;
+    border-color: #6a0dad;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 8px 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn--details:hover {
+    background-color: #550a8d;
+    border-color: #550a8d;
+    transform: scale(1.05);
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); 
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+.modal-overlay.active {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #232946;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
+    width: 95%;
+    max-width: 750px;
+    position: relative;
+    transform: translateY(-50px) scale(0.85);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin: 20px auto;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0) scale(1);
+}
+
+.modal-content__close-btn {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 300;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.modal-content__close-btn:hover {
+    color: #e91e63;
+    transform: rotate(90deg);
+}
+
+.section-modal {
+    display: none;
+}
+
+.section-modal__heading {
+    color: #e91e63;
+    font-weight: 700;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #6a0dad;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.section-modal__text {
+    color: #ffffff; 
+}
+
+.section-modal__text strong {
+    color: #e91e63;
+    font-weight: 700;
+    display: inline-block;
+    min-width: 120px;
+}
+
+.section-modal__list {
+    list-style: none;
+    padding: 0;
+}
+
+.section-modal__list-item {
+    background: transparent;
+    color: #ffffff;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-radius: 0;
+    border-left: 5px solid #6a0dad;
+    padding-left: 15px;
+    font-size: 0.98em;
+    font-weight: 400;
+    transition: all 0.2s;
+}
+
+.section-modal__list-item:hover {
+    background: #3c4f6d;
+    border-left-width: 8px;
+}
+
+.section-modal__list-item strong {
+    color: #e91e63;
+    font-weight: 700;
+}
+
+.section-modal__sub-heading,
+.section-modal__project-title,
+.section-modal__company {
+    color: #ffffff;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.section-modal__company {
+    font-weight: 700;
+    color: #e91e63;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida - Santiago Medina</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+
+<div class="container container--cv py-4">
+    <a href="../index.html" class="btn btn-secondary container__btn-back mb-4">⬅ Regresar</a>
+
+    <h1 class="heading heading--primary text-center mb-5">Hoja de Vida - Santiago Medina Hernández</h1>
+
+    <div class="profile-block">
+        <div class="profile-block__photo-container">
+            <img src="/img/sant.png" alt="Santiago Medina" class="profile-block__photo"> 
+        </div>
+
+        <h2 class="profile-block__title">Perfil Profesional</h2>
+        <p class="profile-block__text">
+            Estudiante de Ingeniería en Sistemas con doble titulación técnica y tecnológica. Especializado en oporte de infraestructura Nivel 1 y 2, diagnóstico de redes y gestión de software, complementado con bases sólidas en desarrollo Java. Busco aplicar mi proactividad y mi orientación al aprendizaje continuo para enfrentar desafíos tecnológicos y optimizar la eficiencia operativa en entornos dinámicos.
+        </p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 mb-5">
+        <div class="col">
+            <div class="card-mini">
+                <h4 class="card-mini__title">Contacto</h4>
+                <button class="btn btn--details" onclick="mostrarModal('contacto-contenido')">Ver Datos</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-mini">
+                <h4 class="card-mini__title">Educación</h4>
+                <button class="btn btn--details" onclick="mostrarModal('educacion-contenido')">Ver Formación</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-mini">
+                <h4 class="card-mini__title">Habilidades</h4>
+                <button class="btn btn--details" onclick="mostrarModal('habilidades-contenido')">Ver Competencias</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-mini">
+                <h4 class="card-mini__title">Experiencia</h4>
+                <button class="btn btn--details" onclick="mostrarModal('experiencia-contenido')">Ver Logros</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-mini">
+                <h4 class="card-mini__title">Proyectos</h4>
+                <button class="btn btn--details" onclick="mostrarModal('proyectos-contenido')">Ver Portfolio</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-mini">
+                <h4 class="card-mini__title">Referencias</h4>
+                <button class="btn btn--details" onclick="mostrarModal('referencias-contenido')">Ver Datos</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-cv" class="modal-overlay" onclick="ocultarModal(event)">
+    <div class="modal-content">
+        <span class="modal-content__close-btn" onclick="document.getElementById('modal-cv').classList.remove('active')">&times;</span>
+
+        <div id="contacto-contenido" class="section-modal">
+            <h3 class="section-modal__heading">Contacto 📞</h3>
+            <p class="section-modal__text"><strong>Teléfono 1:</strong> 320 407 8802</p>
+            <p class="section-modal__text"><strong>Teléfono 2:</strong> 310 337 3308</p>
+            <p class="section-modal__text"><strong>Dirección:</strong> Carrera 107 #141a-45</p>
+            <p class="section-modal__text"><strong>Cédula:</strong> 1031644466</p>
+            <p class="section-modal__text"><strong>Correo:</strong> Santi.medinah.05@gmail.com</p>
+        </div>
+
+        <div id="educacion-contenido" class="section-modal">
+            <h3 class="section-modal__heading">Educación 🎓</h3>
+            <ul class="section-modal__list">
+                <li class="section-modal__list-item">Tecnología en Ingeniería en Sistemas – Fundación Universitaria Compensar, 2024 (En curso)</li>
+                <li class="section-modal__list-item">Técnica en Ingeniería en Sistemas – Fundación Universitaria Compensar, 2024</li>
+                <li class="section-modal__list-item">Curso Java Foundation – ORACLE Academy, 2024</li>
+                <li class="section-modal__list-item">Bachiller Académico – Colegio Juan Lozano y Lozano, 2021</li>
+            </ul>
+        </div>
+
+        <div id="habilidades-contenido" class="section-modal">
+            <h3 class="section-modal__heading">Habilidades ✨</h3>
+            
+            <h4 class="section-modal__sub-heading">Hard Skills (Técnicas)</h4>
+            <ul class="section-modal__list">
+                <li class="section-modal__list-item">Soporte Técnico L1 y L2: Diagnóstico y resolución de fallas de hardware y software.</li>
+                <li class="section-modal__list-item">Networking: Monitoreo y análisis básico de redes (uso de Wireshark/nmap, IP, Subnetting).</li>
+                <li class="section-modal__list-item">Inventario IT: Gestión y control de activos tecnológicos (Excel, herramientas de ITSM).</li>
+                <li class="section-modal__list-item">Lenguajes: Conocimiento en Java (Foundation), SQL (Básico).</li>
+                <li class="section-modal__list-item">Sistemas Operativos: Experiencia en Windows 10/11 y entornos básicos de Linux.</li>
+            </ul>
+            
+            <h4 class="section-modal__sub-heading">Soft Skills (Blandas)</h4>
+            <ul class="section-modal__list">
+                <li class="section-modal__list-item">Liderazgo y Coordinación de Equipos.</li>
+                <li class="section-modal__list-item">Toma de decisiones bajo presión.</li>
+                <li class="section-modal__list-item">Gestión eficiente del tiempo y tareas.</li>
+                <li class="section-modal__list-item">Orientación al cliente y comunicación efectiva.</li>
+            </ul>
+        </div>
+
+        <div id="experiencia-contenido" class="section-modal">
+            <h3 class="section-modal__heading">Experiencia Laboral 💼</h3>
+            <h5 class="section-modal__company">Técnico IT — TIS PRODUCTIONS S.A.S</h5>
+            <p class="section-modal__text"><strong>Duración:</strong> Septiembre 2025 – Noviembre 2025 (Pausa de 1 mes)</p>
+            <ul class="section-modal__list">
+                <li class="section-modal__list-item">Optimización de Operaciones: Reduje el tiempo de inactividad de los usuarios en un 15% mediante la optimización de software clave y la implementación de protocolos de mantenimiento preventivo.</li>
+                <li class="section-modal__list-item">Gestión de Incidentes: Proveí soporte técnico L1 y L2 para más de 50 usuarios, resolviendo problemas de conectividad, correo electrónico y aplicaciones críticas.</li>
+                <li class="section-modal__list-item">Diagnóstico y Redes: Realicé el análisis básico de la infraestructura de red para identificar cuellos de botella y asegurar la continuidad operativa.</li>
+                <li class="section-modal__list-item">Control de Activos: Lideré el inventario físico y lógico de 100+ activos tecnológicos, asegurando la precisión de los registros para la toma de decisiones.</li>
+            </ul>
+        </div>
+
+        <div id="proyectos-contenido" class="section-modal">
+            <h3 class="section-modal__heading">Proyectos Relevantes 💻</h3>
+            
+            <h4 class="section-modal__project-title">Sistema de Gestión de Inventario (JAVA)</h4>
+            <ul class="section-modal__list">
+                <li class="section-modal__list-item">Descripción: Desarrollo de una aplicación de consola en Java para simular la gestión de activos y existencias.</li>
+                <li class="section-modal__list-item">Skills Aplicados: Programación Orientada a Objetos (POO), manejo de estructuras de datos básicas.</li>
+            </ul>
+            
+            <h4 class="section-modal__project-title">Análisis de Tráfico de Red (Networking)</h4>
+            <ul class="section-modal__list">
+                <li class="section-modal__list-item">Descripción: Simulación y análisis del tráfico de una red local utilizando Wireshark para detectar patrones anómalos y entender el flujo de datos.</li>
+                <li class="section-modal__list-item">Skills Aplicados: Análisis de protocolos TCP/IP, identificación de puertos, seguridad básica de red.</li>
+            </ul>
+        </div>
+        
+        <div id="referencias-contenido" class="section-modal">
+            <h3 class="section-modal__heading">Referencias 👍</h3>
+            <ul class="section-modal__list">
+                <li class="section-modal__list-item">
+                    <strong>David Rojas</strong><br>
+                    Ingeniero en redes<br>
+                    Tel: 310 806 7574
+                </li>
+                <br>
+                <li class="section-modal__list-item">
+                    <strong>Carolina Celeita</strong><br>
+                    Jefa de IT
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+function mostrarModal(idContenido) {
+    const modal = document.getElementById('modal-cv');
+    document.querySelectorAll(".section-modal").forEach(s => s.style.display = "none");
+    document.getElementById(idContenido).style.display = "block";
+    modal.classList.add('active');
+}
+
+function ocultarModal(event) {
+    const modal = document.getElementById('modal-cv');
+    if (event.target === modal) {
+        modal.classList.remove('active');
+    }
+}
+</script>
+
+</body>
+</html>
